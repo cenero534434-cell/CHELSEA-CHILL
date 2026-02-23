@@ -1,0 +1,786 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{70B41080-8DC9-4B30-997D-199E6CA4AC11}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Chelsea_Chill_02.My.MyApplication</StartupObject>
+    <RootNamespace>Chelsea_Chill_02</RootNamespace>
+    <AssemblyName>Chelsea Chill 02</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Chelsea Chill 02.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Chelsea Chill 02.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Screenshot 2024-10-20 173248.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>packages\BouncyCastle.Cryptography.2.4.0\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>packages\CrystalReports.ReportAppServer.CommLayer.13.0.4003\lib\net40\CrystalDecisions.ReportAppServer.CommLayer.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommonObjectModel, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>packages\CrystalReports.ReportAppServer.CommonObjectModel.13.0.4003\lib\net40\CrystalDecisions.ReportAppServer.CommonObjectModel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.Prompting, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>packages\CrystalReports.ReportAppServer.Prompting.13.0.4003\lib\net40\CrystalDecisions.ReportAppServer.Prompting.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.26.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.26.1\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.4, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\iTextSharp.5.5.13.4\lib\net461\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.3.8.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.1.3.8\lib\net462\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.3.8.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.Streams.1.3.8\lib\net462\K4os.Compression.LZ4.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.8.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Hash.xxHash.1.0.8\lib\net462\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=9.0.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.9.0.0\lib\net462\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="NuGet.Frameworks, Version=6.11.0.119, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\NuGet.Frameworks.6.11.0\lib\net472\NuGet.Frameworks.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Configuration.ConfigurationManager.8.0.0\lib\net462\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=8.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.8.0.1\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Pipelines, Version=5.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Pipelines.5.0.2\lib\net461\System.IO.Pipelines.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="ZstdSharp, Version=0.8.0.0, Culture=neutral, PublicKeyToken=8d151af33a4ad5cf, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZstdSharp.Port.0.8.0\lib\net462\ZstdSharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssistantMngr_Expense_Form.Designer.vb">
+      <DependentUpon>AssistantMngr_Expense_Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AssistantMngr_Expense_Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BurgerControl.Designer.vb">
+      <DependentUpon>BurgerControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BurgerControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Category_Appetizer_Form.Designer.vb">
+      <DependentUpon>Category_Appetizer_Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Category_Appetizer_Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssistantMngr_Cashier_Form.Designer.vb">
+      <DependentUpon>AssistantMngr_Cashier_Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AssistantMngr_Cashier_Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssistantMngr_Dashboard_Form.Designer.vb">
+      <DependentUpon>AssistantMngr_Dashboard_Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AssistantMngr_Dashboard_Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssistantMngr_Inventory_Form.Designer.vb">
+      <DependentUpon>AssistantMngr_Inventory_Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AssistantMngr_Inventory_Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssistantMngr_Maintenance_UI_Form.Designer.vb">
+      <DependentUpon>AssistantMngr_Maintenance_UI_Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AssistantMngr_Maintenance_UI_Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssistantMngr_Report_Form.Designer.vb">
+      <DependentUpon>AssistantMngr_Report_Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AssistantMngr_Report_Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Category_Beverages_Form.Designer.vb">
+      <DependentUpon>Category_Beverages_Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Category_Beverages_Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FlavoredLatte_Flavors.Designer.vb">
+      <DependentUpon>FlavoredLatte_Flavors.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FlavoredLatte_Flavors.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fries_Size.Designer.vb">
+      <DependentUpon>Fries_Size.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fries_Size.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Icecramble_SIze.Designer.vb">
+      <DependentUpon>Icecramble_SIze.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icecramble_SIze.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ingredients_Form.Designer.vb">
+      <DependentUpon>Ingredients_Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ingredients_Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainDishControl.Designer.vb">
+      <DependentUpon>MainDishControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MainDishControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ManageProduct_Form.Designer.vb">
+      <DependentUpon>ManageProduct_Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ManageProduct_Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager_Cashier_Form.Designer.vb">
+      <DependentUpon>Manager_Cashier_Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Manager_Cashier_Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager_Expense_Form.Designer.vb">
+      <DependentUpon>Manager_Expense_Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Manager_Expense_Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager_Report.Designer.vb">
+      <DependentUpon>Manager_Report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Manager_Report.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu_FruitSoda_Form.Designer.vb">
+      <DependentUpon>Menu_FruitSoda_Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu_FruitSoda_Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu_IcedCoffee_Form.Designer.vb">
+      <DependentUpon>Menu_IcedCoffee_Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu_IcedCoffee_Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu_IcedMatcha_Form.Designer.vb">
+      <DependentUpon>Menu_IcedMatcha_Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu_IcedMatcha_Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu_IceScramble_Form.Designer.vb">
+      <DependentUpon>Menu_IceScramble_Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu_IceScramble_Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager_Inventory_Form.Designer.vb">
+      <DependentUpon>Manager_Inventory_Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Manager_Inventory_Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu_Burger_form.Designer.vb">
+      <DependentUpon>Menu_Burger_form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu_Burger_form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUD_Module.vb" />
+    <Compile Include="DBLogin.vb" />
+    <Compile Include="Menu_HotdogSandwich_Form.Designer.vb">
+      <DependentUpon>Menu_HotdogSandwich_Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu_HotdogSandwich_Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login_form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login_form.Designer.vb">
+      <DependentUpon>Login_form.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintainance_SystemSettings_Form.Designer.vb">
+      <DependentUpon>Maintainance_SystemSettings_Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Maintainance_SystemSettings_Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintenance_EM_Form.Designer.vb">
+      <DependentUpon>Maintenance_EM_Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance_EM_Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager_Dashboard_Form.Designer.vb">
+      <DependentUpon>Manager_Dashboard_Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Manager_Dashboard_Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu_Milktea_Form.Designer.vb">
+      <DependentUpon>Menu_Milktea_Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu_Milktea_Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Milktea_Sizes.Designer.vb">
+      <DependentUpon>Milktea_Sizes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Milktea_Sizes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mlogin.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Menu_NonCoffeeForm.Designer.vb">
+      <DependentUpon>Menu_NonCoffeeForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu_NonCoffeeForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Category_Noodles_Form.Designer.vb">
+      <DependentUpon>Category_Noodles_Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Category_Noodles_Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu_Pizza_Form.Designer.vb">
+      <DependentUpon>Menu_Pizza_Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu_Pizza_Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager_Report_Form.Designer.vb">
+      <DependentUpon>Manager_Report_Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Manager_Report_Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="New_Cashier_mngr_Form.vb" />
+    <Compile Include="Noodles_Variety.Designer.vb">
+      <DependentUpon>Noodles_Variety.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Noodles_Variety.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pnlBurger.Designer.vb">
+      <DependentUpon>pnlBurger.vb</DependentUpon>
+    </Compile>
+    <Compile Include="pnlBurger.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProductCardControl.Designer.vb">
+      <DependentUpon>ProductCardControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ProductCardControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Product_List_Form.Designer.vb">
+      <DependentUpon>Product_List_Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Product_List_Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RoundCornerTextbox.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Soda_Size_Form.Designer.vb">
+      <DependentUpon>Soda_Size_Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Soda_Size_Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Staff_Cashier_Form.Designer.vb">
+      <DependentUpon>Staff_Cashier_Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Staff_Cashier_Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Staff_Maintenance_UI_Form.Designer.vb">
+      <DependentUpon>Staff_Maintenance_UI_Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Staff_Maintenance_UI_Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintenance_Supplier_Form.Designer.vb">
+      <DependentUpon>Maintenance_Supplier_Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance_Supplier_Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Unarchive_Form.Designer.vb">
+      <DependentUpon>Unarchive_form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Unarchive_form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AssistantMngr_Expense_Form.resx">
+      <DependentUpon>AssistantMngr_Expense_Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BurgerControl.resx">
+      <DependentUpon>BurgerControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Category_Appetizer_Form.resx">
+      <DependentUpon>Category_Appetizer_Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssistantMngr_Cashier_Form.resx">
+      <DependentUpon>AssistantMngr_Cashier_Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssistantMngr_Dashboard_Form.resx">
+      <DependentUpon>AssistantMngr_Dashboard_Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssistantMngr_Inventory_Form.resx">
+      <DependentUpon>AssistantMngr_Inventory_Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssistantMngr_Maintenance_UI_Form.resx">
+      <DependentUpon>AssistantMngr_Maintenance_UI_Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssistantMngr_Report_Form.resx">
+      <DependentUpon>AssistantMngr_Report_Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Category_Beverages_Form.resx">
+      <DependentUpon>Category_Beverages_Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FlavoredLatte_Flavors.resx">
+      <DependentUpon>FlavoredLatte_Flavors.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fries_Size.resx">
+      <DependentUpon>Fries_Size.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icecramble_SIze.resx">
+      <DependentUpon>Icecramble_SIze.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ingredients_Form.resx">
+      <DependentUpon>Ingredients_Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainDishControl.resx">
+      <DependentUpon>MainDishControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageProduct_Form.aa.resx">
+      <DependentUpon>ManageProduct_Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageProduct_Form.resx">
+      <DependentUpon>ManageProduct_Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager_Cashier_Form.resx">
+      <DependentUpon>Manager_Cashier_Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager_Expense_Form.resx">
+      <DependentUpon>Manager_Expense_Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager_Report.resx">
+      <DependentUpon>Manager_Report.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu_FruitSoda_Form.resx">
+      <DependentUpon>Menu_FruitSoda_Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu_IcedCoffee_Form.resx">
+      <DependentUpon>Menu_IcedCoffee_Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu_IcedMatcha_Form.resx">
+      <DependentUpon>Menu_IcedMatcha_Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu_IceScramble_Form.resx">
+      <DependentUpon>Menu_IceScramble_Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager_Inventory_Form.resx">
+      <DependentUpon>Manager_Inventory_Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu_Burger_form.resx">
+      <DependentUpon>Menu_Burger_form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu_HotdogSandwich_Form.resx">
+      <DependentUpon>Menu_HotdogSandwich_Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login_form.resx">
+      <DependentUpon>Login_form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintainance_SystemSettings_Form.resx">
+      <DependentUpon>Maintainance_SystemSettings_Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance_EM_Form.resx">
+      <DependentUpon>Maintenance_EM_Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager_Dashboard_Form.resx">
+      <DependentUpon>Manager_Dashboard_Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu_Milktea_Form.resx">
+      <DependentUpon>Menu_Milktea_Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Milktea_Sizes.resx">
+      <DependentUpon>Milktea_Sizes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu_NonCoffeeForm.resx">
+      <DependentUpon>Menu_NonCoffeeForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Category_Noodles_Form.resx">
+      <DependentUpon>Category_Noodles_Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu_Pizza_Form.resx">
+      <DependentUpon>Menu_Pizza_Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager_Report_Form.resx">
+      <DependentUpon>Manager_Report_Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Noodles_Variety.resx">
+      <DependentUpon>Noodles_Variety.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pnlBurger.resx">
+      <DependentUpon>pnlBurger.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductCardControl.resx">
+      <DependentUpon>ProductCardControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product_List_Form.resx">
+      <DependentUpon>Product_List_Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Soda_Size_Form.resx">
+      <DependentUpon>Soda_Size_Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Staff_Cashier_Form.resx">
+      <DependentUpon>Staff_Cashier_Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Staff_Maintenance_UI_Form.resx">
+      <DependentUpon>Staff_Maintenance_UI_Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance_Supplier_Form.resx">
+      <DependentUpon>Maintenance_Supplier_Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Unarchive_form.resx">
+      <DependentUpon>Unarchive_form.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DBAccess\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0ba4b2bd8f4e684f3536da965944f78f.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\623ac8fef88227bfbd8a48696f09ea65.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\731737.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\764983.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\736460.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot_2024-09-10-14-18-12-07_f598e1360c96b5a5aa16536c303cff92.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Picsart_24-09-10_19-54-03-648.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1828479.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4662171.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\289991173_325330009810534_5122075123393545175_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4329538.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\992482.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1828843.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\753345.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\46621711.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\289991173_325330009810534_5122075123393545175_n1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Picsart_24-09-12_23-22-05-766.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3096687.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1827933.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4476194.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9790368.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9924821.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\271220%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\271220-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1828765.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9217313.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1828791.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9055096.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10542551.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9068871.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\90550961.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1828673.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16783121.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\15178265.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6114260.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16747720.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9307681.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\68804161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\358122570_296579742762172_6648190006106973745_n-removebg-preview11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\358125021_296579962762150_1713336502448186768_n-removebg-preview1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\358123431_296579706095509_3731479346188770598_n-removebg-preview1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\358637290_296579796095500_2553838482684663132_n-removebg-preview1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\359435409_296579689428844_6468679393809232298_n__1_-removebg-preview1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\358128937_296579726095507_9210953306291744595_n-removebg-preview1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\th__4_-removebg-preview2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\th__3_-removebg-preview1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image-removebg-preview1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1427815.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3620688.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3067451.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OffclBG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\For Login Page.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled design %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OffclBG1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\For Login Page1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled design.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled design1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Screenshot 2024-10-20 173248.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
